@@ -34,3 +34,46 @@ body {
     max-width: var(--anchoMaximo);
     margin: 0 auto;
 }
+
+/*inicio header*/
+header .nav_top {
+    background-color: var(--colorSecundario);
+    padding: var(--marginGrid);
+}
+
+header .nav_top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav_top a {
+    text-decoration: none;
+}
+
+header .nav_top a i {
+    color: var(--colorPrincipal);
+    font-size: 140%;
+}
+
+header .nav_top a span {
+    color: white;
+    display: none;
+}
+
+
+
+/* final header */
+
+/* media querys */
+
+/* breakpoint 768px */
+
+@media (min-width: 48em) {
+    header .nav_top a span {
+        display: inline;
+    }
+
+    header .nav_top .container {
+        justify-content: space-between;
+    }
+}
