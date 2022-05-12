@@ -5,12 +5,32 @@
 /*font-family: 'Handlee', cursive;
 font-family: 'Montserrat', sans-serif;*/
 
-* {
-    box-sizing: border-box;
-}
-
 img {
     width: 100%;
     height: auto;
     display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundaria: 'Handlee', cursive;
+    --colorPrincipal: #fa573a;
+    --colorSecundario: #21242e;
+    --fontSize: 1em;
+    --anchoMaximo: 1100px;
+    --marginGrid: 1em;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: var(--fontSize);
+}
+
+.container {
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
 }
