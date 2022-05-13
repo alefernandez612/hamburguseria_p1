@@ -1,9 +1,11 @@
+/*#region Ajustes Básico */
 @import url(reset.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap&family=Kaushan+Script&display=swap');
 
 /*font-family: 'Handlee', cursive;
-font-family: 'Montserrat', sans-serif;*/
+font-family: 'Montserrat', sans-serif;
+font-family: 'Kaushan Script', cursive;*/
 
 img {
     width: 100%;
@@ -17,6 +19,7 @@ html {
 
 :root {
     --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteTitulo: 'Kaushan Script', cursive;
     --fuenteSecundaria: 'Handlee', cursive;
     --colorPrincipal: #fa573a;
     --colorSecundario: #21242e;
@@ -35,7 +38,9 @@ body {
     margin: 0 auto;
 }
 
-/*inicio header*/
+/*#endregion */
+
+/*#region header*/
 
 header nav:after {
     content: none;
@@ -118,12 +123,12 @@ header nav:after {
     clear: both;
 }
 
-/* final header */
+/*#endregion */
 
-/* hero */
+/*#region hero */
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/fondo.jpg) no-repeat center center / cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url(../images/fondo.jpg) no-repeat center center / cover;
     height: 60vh;
     display: flex;
 }
@@ -156,6 +161,7 @@ header nav:after {
     font-size: 115%;
 }
 
+
 .boton {
     color: white;
     display: inline-block;
@@ -187,11 +193,11 @@ header nav:after {
     font-size: 200%;
 }
 
-/* final hero */
+/*#endregion */
 
-/* Ourservices */
+/*#region Ourservices */
 section {
-    padding: 2.5em 0 4em 0;
+    padding: 2.5em 0 1em 0;
 }
 
 section h2 {
@@ -227,7 +233,7 @@ section .underline hr {
     padding: 0 var(--marginGrid);
 }
 
-section article {
+section#ourservices article {
     padding: calc(var(--marginGrid)*2) 0;
     border-bottom: 1px solid #aaa;
 }
@@ -261,9 +267,75 @@ section p {
     transform: rotateY(180deg);
 }
 
-/* final Ourservices */
+/*#endregion */
 
-/* principio footer */
+/*#region Aboutus */
+
+section#aboutus {
+    padding: 1em 0 4em 0;
+}
+
+#aboutus .grid {
+    display: grid;
+    gap: var(--marginGrid);
+    padding: var(--marginGrid);
+}
+
+section#aboutus article h3 {
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+    font-size: 110%;
+}
+
+section article>h4 {
+    color: var(--colorPrincipal);
+}
+
+section#aboutus p {
+    padding-bottom: 0.625em;
+}
+
+#aboutus .enlace {
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: 0.625em;
+    font-weight: 400;
+}
+
+#aboutus .enlace:hover {
+    background: transparent;
+    color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+}
+
+/* #aboutus figure img {
+    border: 2px solid var(--colorPrincipal);
+    margin-bottom: calc(var(--marginGrid)*2);
+    transition: 1s;
+    transform-box: rotateZ(5deg);
+} */
+
+#aboutus figure {
+    border: 2px solid var(--colorPrincipal);
+    margin-bottom: calc(var(--marginGrid)*2);
+    transition: 1s;
+}
+
+#aboutus figure img {
+    transition: 1s;
+}
+
+#aboutus figure:hover {
+    transform: rotateZ(5deg);
+}
+
+#aboutus figure:hover img {
+    transform: rotateZ(-5deg);
+}
+
+/*#endregion */
+
+/*#region footer */
 
 footer {
     position: fixed;
@@ -295,11 +367,9 @@ footer a:hover {
 }
 
 
-/* final footer */
+/*#endregion */
 
-
-/* media querys */
-
+/*#region media querys */
 
 /* breakpoint 768px */
 
@@ -316,11 +386,19 @@ footer a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    #aboutus .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     #ourservices .grid article:last-child {
         grid-column: 1/3;
     }
 
     section article {
+        padding-left: var(--marginGrid);
+    }
+
+    section#ourservices article {
         padding: calc(var(--marginGrid)*2);
         border-bottom: 0;
         border-left: 1px solid #aaa;
@@ -360,8 +438,14 @@ footer a:hover {
     }
 
     section article {
+        padding-left: var(--marginGrid);
+    }
+
+    section#ourservices article {
         padding: calc(var(--marginGrid)*2);
         border-bottom: 0;
         border-left: 1px solid #aaa;
     }
 }
+
+/*#endregion */
