@@ -215,7 +215,7 @@ section .underline hr {
     border: 1px solid var(--colorPrincipal);
     position: absolute;
     width: 100%;
-    top: -1.55px;
+    top: -1px;
 }
 
 #ourservices .grid {
