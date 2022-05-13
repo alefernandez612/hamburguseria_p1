@@ -111,9 +111,80 @@ header nav .menu :is(.activo,
     color: var(--colorPrincipal);
 }
 
-
 /* final header */
 
+/* hero */
+
+.hero {
+    background-image: url(../images/fondo.jpg);
+    background-color: #999;
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center center;
+    height: 60vh;
+    display: flex;
+}
+
+.hero .container {
+    width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: 230%;
+    color: white;
+}
+
+.hero :is(h2, .container>div) {
+    margin: var(--marginGrid) 0;
+}
+
+.hero h2 {
+    color: var(--colorPrincipal);
+    font-size: 125%;
+    text-shadow: 1px 1px 3px black;
+}
+
+.hero p {
+    color: white;
+    font-size: 115%;
+}
+
+.boton {
+    color: white;
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    padding: 1.15em;
+    text-decoration: none;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.boton:hover {
+    background: transparent;
+    color: var(--colorPrincipal);
+}
+
+.boton:hover i {
+    transition: 0.5s;
+    transform: translateX(5px);
+}
+
+.hero .social {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+/* final hero */
 
 /* principio footer */
 
