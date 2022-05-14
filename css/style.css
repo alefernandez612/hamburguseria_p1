@@ -1,5 +1,6 @@
 /*#region Ajustes Básico */
 @import url(reset.css);
+@import url(variables.css);
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
 @import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700');
 
@@ -16,21 +17,13 @@ html {
     scroll-behavior: smooth;
 }
 
-:root {
-    --fuentePrincipal: 'Montserrat', sans-serif;
-    --fuenteTitulo: 'Kaushan Script', cursive;
-    --fuenteSecundaria: 'Handlee', cursive;
-    --colorPrincipal: #fa573a;
-    --colorPrincipalFecha: RGBA(250, 87, 58, 0.7);
-    --colorSecundario: #21242e;
-    --fontSize: 1rem;
-    --anchoMaximo: 1100px;
-    --marginGrid: 1rem;
-}
-
 body {
     font-family: var(--fuentePrincipal);
     font-size: var(--fontSize);
+}
+
+body {
+    line-height: 1;
 }
 
 .container {
@@ -90,13 +83,13 @@ header nav .hamburguesa {
 
 header nav .hamburguesa div {
     border-top: 2px solid #aaa;
-    margin-bottom: 0.625em;
+    margin-bottom: var(--marginGeneral);
 }
 
 header nav .menu {
     clear: both;
     text-align: center;
-    padding-top: 0.625em;
+    padding-top: var(--marginGeneral);
 }
 
 header nav .menu a {
@@ -292,13 +285,13 @@ section article>h4 {
 }
 
 section#aboutus p {
-    padding-bottom: 0.625em;
+    padding-bottom: var(--marginGeneral);
 }
 
 #aboutus .enlace {
     background-color: var(--colorPrincipal);
     color: white;
-    padding: 0.625em;
+    padding: var(--marginGeneral);
     font-weight: 400;
 }
 
@@ -341,7 +334,7 @@ section#aboutus p {
 }
 
 #ourblog .grid article {
-    padding: 0 0.625em;
+    padding: 0 var(--marginGeneral);
 }
 
 #ourblog .grid article h3 {
@@ -377,7 +370,84 @@ section#aboutus p {
 }
 
 #ourblog figure .fecha-esquina h4 {
-    margin-top: 0.625em;
+    margin-top: var(--marginGeneral);
+}
+
+/*#endregion */
+
+/*#region Menu */
+main .fondo {
+    background-color: var(--colorSecundario);
+    min-height: 100vh;
+}
+
+#title-menu h2 {
+    color: white;
+}
+
+#todaymenu .grid {
+    display: grid;
+    gap: var(--marginGrid);
+    padding: var(--marginGrid);
+}
+
+section#todaymenu {
+    padding-top: 1em;
+}
+
+#todaymenu .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 70%;
+}
+
+#todaymenu .container .menu {
+    width: 100%;
+}
+
+#todaymenu .container .menu>li {
+    border: 1px solid transparent;
+}
+
+#todaymenu .container .menu li>a {
+    display: block;
+    font-weight: 700;
+    color: white;
+    border-radius: 5px;
+    padding: var(--marginGeneral) var(--marginGrid);
+    text-decoration: none;
+}
+
+#todaymenu .container .menu .activo {
+    background-color: var(--colorPrincipal);
+}
+
+#todaymenu .container .menu a:hover {
+    background-color: var(--colorPrincipal);
+}
+
+/* #todaymenu .container:last-child {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: space-between;
+} */
+
+#todaymenu .container h2 {
+    padding-top: calc(var(--marginGrid)*2);
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    font-size: 120%;
+    color: white;
+}
+
+#todaymenu .container hr {
+    margin: var(--marginGeneral) 0;
+    width: 100px;
+    border: 1px solid var(--colorPrincipal);
 }
 
 /*#endregion */
