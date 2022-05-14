@@ -1,0 +1,604 @@
+/*#region Ajustes Básico */
+@import url(reset.css);
+@import url(variables.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700');
+
+/*font-family: 'Handlee', cursive;
+font-family: 'Montserrat', sans-serif;*/
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: var(--fontSize);
+}
+
+body {
+    line-height: 1;
+}
+
+.container {
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+/*#endregion */
+
+/*#region header*/
+
+header nav:after {
+    content: none;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+header .nav_top {
+    background-color: var(--colorSecundario);
+    padding: var(--marginGrid);
+}
+
+header .nav_top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav_top a {
+    text-decoration: none;
+}
+
+header .nav_top a i {
+    color: var(--colorPrincipal);
+    font-size: 140%;
+}
+
+header .nav_top a span {
+    color: white;
+    display: none;
+}
+
+header nav {
+    padding: var(--marginGrid);
+}
+
+header nav .logo {
+    float: left;
+    max-width: 100px;
+}
+
+header nav .hamburguesa {
+    float: right;
+    cursor: pointer;
+    width: 2em;
+}
+
+header nav .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: var(--marginGeneral);
+}
+
+header nav .menu {
+    clear: both;
+    text-align: center;
+    padding-top: var(--marginGeneral);
+}
+
+header nav .menu a {
+    display: block;
+    text-decoration: none;
+    padding: var(--marginGrid);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a {
+    border: 0;
+}
+
+header nav .menu :is(.activo,
+    a:hover) {
+    color: var(--colorPrincipal);
+}
+
+header nav:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+/*#endregion */
+
+/*#region hero */
+
+.hero {
+    /* background-image: url(../images/fondo.jpg);
+    background-color: #999;
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    height: 60vh;
+    display: flex; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(../images/fondo.jpg) center center / cover;
+    height: 60vh;
+    display: flex;
+}
+
+.hero .container {
+    width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: 230%;
+    color: white;
+}
+
+.hero :is(h2, .container>div) {
+    margin: var(--marginGrid) 0;
+}
+
+.hero h2 {
+    color: var(--colorPrincipal);
+    font-size: 125%;
+    text-shadow: 2px 2px 3px black;
+}
+
+.hero p {
+    color: white;
+    font-size: 115%;
+}
+
+
+.boton {
+    color: white;
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    padding: 1.15em;
+    text-decoration: none;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.boton:hover {
+    background: transparent;
+    color: var(--colorPrincipal);
+}
+
+.boton:hover i {
+    transition: 0.3s;
+    transform: translateX(5px);
+}
+
+.hero .social {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+}
+
+/*#endregion */
+
+/*#region Ourservices */
+section {
+    padding: 2.5em 0 1em 0;
+}
+
+#ourservices .grid {
+    display: grid;
+    gap: var(--marginGrid);
+    padding: 0 var(--marginGrid);
+}
+
+section h2 {
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+
+section h2 span {
+    color: var(--colorPrincipal);
+}
+
+section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 700;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+
+section .underline hr {
+    border: 1px solid var(--colorPrincipal);
+    position: absolute;
+    width: 100%;
+    top: -1px;
+}
+
+section#ourservices article {
+    padding: calc(var(--marginGrid)*2) 0;
+    border-bottom: 1px solid #aaa;
+}
+
+section article h3 {
+    font-weight: 700;
+    margin: 0.5em 0;
+    font-size: 110%;
+}
+
+section p {
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
+
+.enlace {
+    color: var(--colorPrincipal);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#ourservices article>div i {
+    border: 1px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+    font-size: 150%;
+    padding: 0.5em;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}
+
+/*#endregion */
+
+/*#region Aboutus */
+
+section#aboutus {
+    padding: 1em 0 4em 0;
+}
+
+#aboutus .grid {
+    display: grid;
+    gap: var(--marginGrid);
+    padding: var(--marginGrid);
+}
+
+section#aboutus article h3 {
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+    font-size: 110%;
+}
+
+section article>h4 {
+    color: var(--colorPrincipal);
+}
+
+section#aboutus p {
+    padding-bottom: var(--marginGeneral);
+}
+
+#aboutus .enlace {
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: var(--marginGeneral);
+    font-weight: 400;
+}
+
+#aboutus .enlace:hover {
+    background: transparent;
+    color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+}
+
+#aboutus figure {
+    border: 2px solid var(--colorPrincipal);
+    margin-bottom: calc(var(--marginGrid)*2);
+    transition: 1s;
+}
+
+#aboutus figure img {
+    transition: 1s;
+}
+
+#aboutus figure:hover {
+    transform: rotateZ(5deg);
+}
+
+#aboutus figure:hover img {
+    transform: rotateZ(-5deg);
+}
+
+/*#endregion */
+
+/*#region Our Blog */
+#ourblog .grid {
+    display: grid;
+    gap: var(--marginGrid);
+    padding: var(--marginGrid);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#ourblog .grid>div {
+    margin: var(--marginGrid) 0;
+}
+
+#ourblog .grid article {
+    padding: 0 var(--marginGeneral);
+}
+
+#ourblog .grid article h3 {
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+    font-size: 150%;
+}
+
+#ourblog .grid article h4 {
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+    color: var(--colorPrincipal);
+}
+
+#ourblog figure {
+    position: relative;
+    margin-bottom: var(--marginGrid);
+}
+
+#ourblog figure .fecha-esquina {
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.8em var(--marginGrid);
+    background: var(--colorPrincipalFecha);
+}
+
+#ourblog figure .fecha-esquina h4 {
+    margin-top: var(--marginGeneral);
+}
+
+/*#endregion */
+
+/*#region Menu */
+main .fondo {
+    background-color: var(--colorSecundario);
+    min-height: 100vh;
+}
+
+.fondo section :is(h2, #title-menu) {
+    font-weight: 700;
+    color: white;
+}
+
+.fondo :is(.grid, #carta, #todaymenu) {
+    display: grid;
+    gap: var(--marginGrid);
+}
+
+.fondo .grid {
+    padding: var(--marginGrid);
+    margin: 0 auto;
+}
+
+.fondo section h2 {
+    padding-top: var(--marginGrid);
+    font-family: var(--fuentePrincipal);
+    font-size: 120%;
+}
+
+#title-menu h2 {
+    font-family: var(--fuenteSecundaria);
+    padding: var(--marginGrid) 0;
+    font-size: 200%;
+    text-align: center;
+}
+
+#todaymenu :is(.container, .menu) {
+    width: 100%;
+}
+
+#todaymenu .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#todaymenu .container .menu>li {
+    border: 1px solid transparent;
+}
+
+#todaymenu .container .menu li>a {
+    display: block;
+    color: white;
+    border-radius: 5px;
+    padding: var(--marginGeneral) var(--marginGrid);
+    text-decoration: none;
+}
+
+#todaymenu .container .menu :is(.activo, a:hover) {
+    background-color: var(--colorPrincipal);
+}
+
+#todaymenu .container hr {
+    margin: var(--marginGeneral) 0;
+    width: 100px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+#carta article {
+    padding: 0 0 4em 0;
+}
+
+#carta article h2 {
+    padding: var(--marginGrid) 0;
+    text-align: left;
+    font-size: 110%;
+    line-height: 110%;
+}
+
+#carta article h2>span {
+    padding-left: var(--marginGeneral);
+}
+
+/*#endregion */
+
+/*#region footer */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--colorSecundario);
+    color: white;
+    padding: var(--marginGrid);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    color: var(--colorPrincipal);
+}
+
+.arriba {
+    position: fixed;
+    font-size: 2em;
+    bottom: 50px;
+    right: 10px;
+}
+
+.arriba a {
+    color: var(--colorPrincipal);
+}
+
+/*#endregion */
+
+/*#region media querys */
+
+/* breakpoint 768px */
+
+@media (min-width: 48rem) {
+    header .nav_top a span {
+        display: inline;
+    }
+
+    header .nav_top .container {
+        justify-content: space-between;
+    }
+
+    #ourservices .grid article:last-child {
+        grid-column: 1/3;
+    }
+
+    section article {
+        padding-left: var(--marginGrid);
+    }
+
+    .underline {
+        padding-bottom: var(--marginGeneral);
+    }
+
+    section#ourservices article {
+        padding: calc(var(--marginGrid)*2);
+        border-bottom: 0;
+        border-left: 1px solid #aaa;
+    }
+
+    #aboutus .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #ourblog .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #todaymenu .container {
+        width: 50%;
+    }
+
+    .fondo section {
+        padding-top: 0;
+    }
+
+    .fondo .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #carta {
+        grid-template-columns: 30% 70%;
+    }
+
+    #carta article h2 {
+        padding-top: 0;
+    }
+}
+
+
+/* breakpoint 1004 */
+
+@media (min-width:62.750em) {
+    header nav .hamburguesa {
+        display: none;
+    }
+
+    header nav .menu {
+        float: right;
+        padding-top: 0;
+        clear: none;
+    }
+
+    header nav .menu li {
+        display: inline-block;
+    }
+
+    header nav .menu li a {
+        border: none;
+        padding: 0.4em 0 0.4em 2.5em;
+    }
+
+    #ourservices .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #ourservices .grid article:last-child {
+        grid-column: 3/4;
+    }
+
+    section article {
+        padding-left: var(--marginGrid);
+    }
+
+    section#ourservices article {
+        padding: calc(var(--marginGrid)*2);
+        border-bottom: 0;
+        border-left: 1px solid #aaa;
+    }
+}
+
+/*#endregion */
