@@ -381,14 +381,32 @@ main .fondo {
     min-height: 100vh;
 }
 
+.fondo section h2 {
+    padding-top: calc(var(--marginGrid)*2);
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    font-size: 120%;
+    color: white;
+}
+
+#title-menu h2 {
+    color: white;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+
 #title-menu h2 {
     color: white;
 }
 
-#todaymenu .grid {
+.fondo .grid {
     display: grid;
+    width: 70%;
     gap: var(--marginGrid);
     padding: var(--marginGrid);
+    grid-template-columns: 1fr;
+    margin: 0 auto;
 }
 
 section#todaymenu {
@@ -400,7 +418,6 @@ section#todaymenu {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    width: 70%;
 }
 
 #todaymenu .container .menu {
@@ -420,34 +437,24 @@ section#todaymenu {
     text-decoration: none;
 }
 
-#todaymenu .container .menu .activo {
+#todaymenu .container .menu :is(.activo, a:hover) {
     background-color: var(--colorPrincipal);
-}
-
-#todaymenu .container .menu a:hover {
-    background-color: var(--colorPrincipal);
-}
-
-/* #todaymenu .container:last-child {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-    justify-content: space-between;
-} */
-
-#todaymenu .container h2 {
-    padding-top: calc(var(--marginGrid)*2);
-    font-family: var(--fuentePrincipal);
-    font-weight: 700;
-    font-size: 120%;
-    color: white;
 }
 
 #todaymenu .container hr {
     margin: var(--marginGeneral) 0;
     width: 100px;
     border: 1px solid var(--colorPrincipal);
+}
+
+#carta article {
+    padding-bottom: 4em;
+}
+
+#carta article h2 {
+    padding: var(--marginGrid) 0;
+    text-align: left;
+    font-size: 110%;
 }
 
 /*#endregion */
@@ -482,7 +489,6 @@ footer a:hover {
 .arriba a {
     color: var(--colorPrincipal);
 }
-
 
 /*#endregion */
 
@@ -525,6 +531,8 @@ footer a:hover {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
     }
+
+
 }
 
 
