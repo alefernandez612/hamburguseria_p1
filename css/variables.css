@@ -1,0 +1,12 @@
+:root {
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteTitulo: 'Kaushan Script', cursive;
+    --fuenteSecundaria: 'Handlee', cursive;
+    --colorPrincipal: #fa573a;
+    --colorPrincipalFecha: RGBA(250, 87, 58, 0.7);
+    --colorSecundario: #21242e;
+    --fontSize: 1em;
+    --anchoMaximo: 1100px;
+    --marginGrid: 1em;
+    --marginGeneral: 0.625em;
+}
