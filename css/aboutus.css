@@ -1,0 +1,51 @@
+section.aboutus {
+    padding: 1em 0 4em 0;
+}
+
+.aboutus .grid {
+    padding: var(--marginGrid);
+}
+
+section .aboutus article h3 {
+    margin: 0 0 0.5em 0;
+}
+
+.aboutus article>h4 {
+    padding: 0.2em 0 0.3125em 0;
+    color: var(--colorPrincipal);
+}
+
+section.aboutus p {
+    padding-bottom: var(--marginGeneral);
+}
+
+.aboutus .enlace {
+    background-color: var(--colorPrincipal);
+    color: white;
+    padding: var(--marginGeneral);
+    font-weight: 400;
+}
+
+.aboutus .enlace:hover {
+    background: transparent;
+    color: var(--colorPrincipal);
+    border: 1px solid var(--colorPrincipal);
+}
+
+.aboutus figure {
+    border: 2px solid var(--colorPrincipal);
+    margin-bottom: calc(var(--marginGrid)*2);
+    transition: 1s;
+}
+
+.aboutus figure img {
+    transition: 1s;
+}
+
+.aboutus figure:hover {
+    transform: rotateZ(5deg);
+}
+
+.aboutus figure:hover img {
+    transform: rotateZ(-5deg);
+}

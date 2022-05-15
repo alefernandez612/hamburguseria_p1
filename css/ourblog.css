@@ -1,0 +1,58 @@
+.ourblog .grid {
+    padding: var(--marginGrid);
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.ourblog .grid>div {
+    margin: var(--marginGrid) 0;
+}
+
+.ourblog .grid article {
+    padding: 0 var(--marginGeneral);
+}
+
+.ourblog .grid article>h3 {
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+    font-size: 150%;
+}
+
+.ourblog .grid article>h4 {
+    font-weight: 700;
+    margin: 0 0 0.5em 0;
+    color: var(--colorPrincipal);
+}
+
+.ourblog .grid article>p {
+    height: 55px;
+    overflow: hidden;
+}
+
+.ourblog figure {
+    position: relative;
+    margin-bottom: var(--marginGrid);
+}
+
+.fecha-esquina {
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    top: 0;
+    left: 0;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.6em var(--marginGrid);
+    background: var(--colorPrincipalFecha);
+    background-size: cover;
+}
+
+.fecha-esquina h3 {
+    margin: 0;
+}
+
+.fecha-esquina h4 {
+    margin-top: 0.3125em;
+}

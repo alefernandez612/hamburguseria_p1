@@ -1,0 +1,96 @@
+main .fondo {
+    background-color: var(--colorSecundario);
+    min-height: 100vh;
+}
+
+.fondo :is(section h2, aside h2) {
+    font-weight: 700;
+    color: white;
+}
+
+.fondo :is(.carta, .todaymenu) {
+    display: grid;
+    gap: var(--marginGrid);
+}
+
+.fondo .grid {
+    padding: var(--marginGrid);
+    margin: 0 auto;
+}
+
+.fondo .grid aside>h2 {
+    padding: var(--marginGrid) 0;
+}
+
+.fondo .grid :is(section h2, aside h2) {
+    font-family: var(--fuentePrincipal);
+    font-size: 120%;
+}
+
+.title-menu h2 {
+    font-family: var(--fuenteSecundaria);
+    padding-top: var(--marginGrid);
+    padding-bottom: 0.3125em;
+}
+
+.todaymenu :is(.container, .menu) {
+    width: 100%;
+}
+
+.todaymenu .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.todaymenu div.container {
+    justify-content: center;
+}
+
+.todaymenu .container h2 {
+    text-align: center;
+}
+
+.todaymenu .container hr {
+    margin: var(--marginGeneral) 0;
+    width: 50px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.todaymenu .container p {
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
+
+.todaymenu .container .menu>li {
+    border: 1px solid transparent;
+}
+
+.todaymenu .container .menu li>a {
+    display: block;
+    color: white;
+    border-radius: 5px;
+    padding: var(--marginGeneral) var(--marginGrid);
+    text-decoration: none;
+}
+
+.todaymenu .container .menu :is(.activo, a:hover) {
+    background-color: var(--colorPrincipal);
+}
+
+.carta article {
+    padding: 0 0 4em 0;
+}
+
+.carta article h2 {
+    padding-top: 0;
+    padding-bottom: var(--marginGrid);
+    text-align: left;
+    font-size: 110%;
+    line-height: 110%;
+}
+
+.carta article h2>span {
+    padding-left: var(--marginGeneral);
+}

@@ -1,0 +1,29 @@
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+    font-size: var(--fontSize);
+    line-height: 1;
+}
+
+.container {
+    max-width: var(--anchoMaximo);
+    margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.grid {
+    display: grid;
+    gap: var(--marginGrid);
+}

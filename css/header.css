@@ -1,0 +1,80 @@
+header nav:after {
+    content: none;
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+header .nav_top {
+    background-color: var(--colorSecundario);
+    padding: var(--marginGrid);
+}
+
+header .nav_top .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+header .nav_top a {
+    text-decoration: none;
+}
+
+header .nav_top a i {
+    color: var(--colorPrincipal);
+    font-size: 140%;
+}
+
+header .nav_top a span {
+    color: white;
+    display: none;
+}
+
+header nav {
+    padding: var(--marginGrid);
+}
+
+header nav .logo {
+    float: left;
+    max-width: 100px;
+}
+
+header nav .hamburguesa {
+    float: right;
+    cursor: pointer;
+    width: 2em;
+}
+
+header nav .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: var(--marginGeneral);
+}
+
+header nav .menu {
+    clear: both;
+    text-align: center;
+    padding-top: var(--marginGeneral);
+}
+
+header nav .menu a {
+    display: block;
+    text-decoration: none;
+    padding: var(--marginGrid);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+
+header nav .menu li:last-child a {
+    border: 0;
+}
+
+header nav .menu :is(.activo,
+    a:hover) {
+    color: var(--colorPrincipal);
+}
+
+header nav:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
