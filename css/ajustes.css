@@ -27,3 +27,33 @@ body {
     display: grid;
     gap: var(--marginGrid);
 }
+
+.grid:last-child {
+    margin-bottom: calc(var(--marginGrid)*2);
+}
+
+section {
+    padding: 1.5em 0 1em 0;
+}
+
+section h2 {
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+
+section h2 span {
+    color: var(--colorPrincipal);
+}
+
+section article h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+section p {
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
