@@ -21,7 +21,7 @@
         padding-bottom: var(--marginGeneral);
     }
 
-    section.ourservices article {
+    section .ourservices article {
         padding: calc(var(--marginGrid)*2);
         border-bottom: 0;
         border-left: 1px solid #aaa;

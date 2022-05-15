@@ -1,5 +1,5 @@
-section.aboutus {
-    padding: 1em 0 4em 0;
+section .aboutus {
+    padding-bottom: 4em;
 }
 
 .aboutus .grid {
@@ -15,7 +15,7 @@ section .aboutus article h3 {
     color: var(--colorPrincipal);
 }
 
-section.aboutus p {
+section .aboutus p {
     padding-bottom: var(--marginGeneral);
 }
 

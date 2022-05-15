@@ -1,20 +1,5 @@
-section {
-    padding: 2.5em 0 1em 0;
-}
-
 .ourservices .grid {
     padding: 0 var(--marginGrid);
-}
-
-section h2 {
-    color: black;
-    font-family: var(--fuenteSecundaria);
-    font-size: 200%;
-    text-align: center;
-}
-
-section h2 span {
-    color: var(--colorPrincipal);
 }
 
 section .underline {
@@ -33,24 +18,13 @@ section .underline hr {
     top: -1px;
 }
 
-section.ourservices article {
+section .ourservices article {
     padding: calc(var(--marginGrid)*2) 0;
     border-bottom: 1px solid #aaa;
 }
 
 .ourservices article h3 {
     margin: 0.5em 0;
-}
-
-section article h3 {
-    font-weight: 700;
-    font-size: 110%;
-}
-
-section p {
-    color: #777;
-    line-height: 1.15em;
-    margin-bottom: var(--marginGrid);
 }
 
 .enlace {
