@@ -43,7 +43,7 @@ main .fondo {
     align-items: flex-start;
 }
 
-.todaymenu div.container {
+.todaymenu div.container:last-child {
     justify-content: center;
 }
 
