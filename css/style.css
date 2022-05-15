@@ -501,7 +501,7 @@ footer a:hover {
 
 /*#region media querys */
 
-/* breakpoint 768px */
+/*#region breakpoint 768px */
 
 @media (min-width: 48rem) {
     header .nav_top a span {
@@ -542,6 +542,10 @@ footer a:hover {
         width: 50%;
     }
 
+    #todaymenu {
+        grid-template-rows: 26% 74%;
+    }
+
     .fondo section {
         padding-top: 0;
     }
@@ -559,8 +563,9 @@ footer a:hover {
     }
 }
 
+/*#endregion */
 
-/* breakpoint 1004 */
+/*#region breakpoint 1004 */
 
 @media (min-width:62.750em) {
     header nav .hamburguesa {
@@ -600,5 +605,7 @@ footer a:hover {
         border-left: 1px solid #aaa;
     }
 }
+
+/*#endregion */
 
 /*#endregion */
