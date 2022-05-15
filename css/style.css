@@ -20,15 +20,16 @@ html {
 body {
     font-family: var(--fuentePrincipal);
     font-size: var(--fontSize);
-}
-
-body {
     line-height: 1;
 }
 
 .container {
     max-width: var(--anchoMaximo);
     margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /*#endregion */
@@ -122,7 +123,7 @@ header nav:after {
 
 .hero {
     /* background-image: url(../images/fondo.jpg);
-    background-color: #999;
+    background-color: .999;
     background-blend-mode: multiply;
     background-position: center center;
     background-size: cover;
@@ -200,7 +201,7 @@ section {
     padding: 2.5em 0 1em 0;
 }
 
-#ourservices .grid {
+.ourservices .grid {
     display: grid;
     gap: var(--marginGrid);
     padding: 0 var(--marginGrid);
@@ -233,14 +234,17 @@ section .underline hr {
     top: -1px;
 }
 
-section#ourservices article {
+section.ourservices article {
     padding: calc(var(--marginGrid)*2) 0;
     border-bottom: 1px solid #aaa;
 }
 
+.ourservices article h3 {
+    margin: 0.5em 0;
+}
+
 section article h3 {
     font-weight: 700;
-    margin: 0.5em 0;
     font-size: 110%;
 }
 
@@ -256,7 +260,7 @@ section p {
     text-decoration: none;
 }
 
-#ourservices article>div i {
+.ourservices article>div i {
     border: 1px solid var(--colorPrincipal);
     color: var(--colorPrincipal);
     font-size: 150%;
@@ -271,97 +275,101 @@ section p {
 
 /*#region Aboutus */
 
-section#aboutus {
+section.aboutus {
     padding: 1em 0 4em 0;
 }
 
-#aboutus .grid {
+.aboutus .grid {
     display: grid;
     gap: var(--marginGrid);
     padding: var(--marginGrid);
 }
 
-section#aboutus article h3 {
-    font-weight: 700;
+section .aboutus article h3 {
     margin: 0 0 0.5em 0;
-    font-size: 110%;
 }
 
-section article>h4 {
+.aboutus article>h4 {
+    padding: 0.2em 0 0.3125em 0;
     color: var(--colorPrincipal);
 }
 
-section#aboutus p {
+section.aboutus p {
     padding-bottom: var(--marginGeneral);
 }
 
-#aboutus .enlace {
+.aboutus .enlace {
     background-color: var(--colorPrincipal);
     color: white;
     padding: var(--marginGeneral);
     font-weight: 400;
 }
 
-#aboutus .enlace:hover {
+.aboutus .enlace:hover {
     background: transparent;
     color: var(--colorPrincipal);
     border: 1px solid var(--colorPrincipal);
 }
 
-#aboutus figure {
+.aboutus figure {
     border: 2px solid var(--colorPrincipal);
     margin-bottom: calc(var(--marginGrid)*2);
     transition: 1s;
 }
 
-#aboutus figure img {
+.aboutus figure img {
     transition: 1s;
 }
 
-#aboutus figure:hover {
+.aboutus figure:hover {
     transform: rotateZ(5deg);
 }
 
-#aboutus figure:hover img {
+.aboutus figure:hover img {
     transform: rotateZ(-5deg);
 }
 
 /*#endregion */
 
 /*#region Our Blog */
-#ourblog .grid {
+.ourblog .grid {
     display: grid;
     gap: var(--marginGrid);
     padding: var(--marginGrid);
     grid-template-columns: repeat(2, 1fr);
 }
 
-#ourblog .grid>div {
+.ourblog .grid>div {
     margin: var(--marginGrid) 0;
 }
 
-#ourblog .grid article {
+.ourblog .grid article {
     padding: 0 var(--marginGeneral);
 }
 
-#ourblog .grid article h3 {
+.ourblog .grid article>h3 {
     font-weight: 700;
     margin: 0 0 0.5em 0;
     font-size: 150%;
 }
 
-#ourblog .grid article h4 {
+.ourblog .grid article>h4 {
     font-weight: 700;
     margin: 0 0 0.5em 0;
     color: var(--colorPrincipal);
 }
 
-#ourblog figure {
+.ourblog .grid article>p {
+    height: 55px;
+    overflow: hidden;
+}
+
+.ourblog figure {
     position: relative;
     margin-bottom: var(--marginGrid);
 }
 
-#ourblog figure .fecha-esquina {
+.fecha-esquina {
     position: absolute;
     color: white;
     font-weight: 700;
@@ -372,12 +380,17 @@ section#aboutus p {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding: 0.8em var(--marginGrid);
+    padding: 0.6em var(--marginGrid);
     background: var(--colorPrincipalFecha);
+    background-size: cover;
 }
 
-#ourblog figure .fecha-esquina h4 {
-    margin-top: var(--marginGeneral);
+.fecha-esquina h3 {
+    margin: 0;
+}
+
+.fecha-esquina h4 {
+    margin-top: 0.3125em;
 }
 
 /*#endregion */
@@ -388,12 +401,12 @@ main .fondo {
     min-height: 100vh;
 }
 
-.fondo section :is(h2, #title-menu) {
+.fondo :is(section h2, aside h2) {
     font-weight: 700;
     color: white;
 }
 
-.fondo :is(.grid, #carta, #todaymenu) {
+.fondo :is(.grid, .carta, .todaymenu) {
     display: grid;
     gap: var(--marginGrid);
 }
@@ -403,35 +416,51 @@ main .fondo {
     margin: 0 auto;
 }
 
-.fondo section h2 {
-    padding-top: var(--marginGrid);
+.fondo .grid aside>h2 {
+    padding: var(--marginGrid) 0;
+}
+
+.fondo .grid :is(section h2, aside h2) {
     font-family: var(--fuentePrincipal);
     font-size: 120%;
 }
 
-#title-menu h2 {
+.title-menu h2 {
     font-family: var(--fuenteSecundaria);
-    padding: var(--marginGrid) 0;
-    font-size: 200%;
-    text-align: center;
+    padding-top: var(--marginGrid);
+    padding-bottom: 0.3125em;
 }
 
-#todaymenu :is(.container, .menu) {
+.todaymenu :is(.container, .menu) {
     width: 100%;
 }
 
-#todaymenu .container {
+.todaymenu .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+}
+
+.todaymenu div.container {
     justify-content: center;
 }
 
-#todaymenu .container .menu>li {
+.todaymenu .container h2 {
+    text-align: center;
+
+}
+
+.todaymenu .container p {
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
+
+.todaymenu .container .menu>li {
     border: 1px solid transparent;
 }
 
-#todaymenu .container .menu li>a {
+.todaymenu .container .menu li>a {
     display: block;
     color: white;
     border-radius: 5px;
@@ -439,28 +468,29 @@ main .fondo {
     text-decoration: none;
 }
 
-#todaymenu .container .menu :is(.activo, a:hover) {
+.todaymenu .container .menu :is(.activo, a:hover) {
     background-color: var(--colorPrincipal);
 }
 
-#todaymenu .container hr {
+.todaymenu .container hr {
     margin: var(--marginGeneral) 0;
-    width: 100px;
+    width: 50px;
     border: 1px solid var(--colorPrincipal);
 }
 
-#carta article {
+.carta article {
     padding: 0 0 4em 0;
 }
 
-#carta article h2 {
-    padding: var(--marginGrid) 0;
+.carta article h2 {
+    padding-top: 0;
+    padding-bottom: var(--marginGrid);
     text-align: left;
     font-size: 110%;
     line-height: 110%;
 }
 
-#carta article h2>span {
+.carta article h2>span {
     padding-left: var(--marginGeneral);
 }
 
@@ -512,7 +542,7 @@ footer a:hover {
         justify-content: space-between;
     }
 
-    #ourservices .grid article:last-child {
+    .ourservices .grid article:last-child {
         grid-column: 1/3;
     }
 
@@ -524,26 +554,26 @@ footer a:hover {
         padding-bottom: var(--marginGeneral);
     }
 
-    section#ourservices article {
+    section.ourservices article {
         padding: calc(var(--marginGrid)*2);
         border-bottom: 0;
         border-left: 1px solid #aaa;
     }
 
-    #aboutus .grid {
+    .aboutus .grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #ourblog .grid {
+    .ourblog .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    #todaymenu .container {
+    .todaymenu .container {
         width: 50%;
     }
 
-    #todaymenu {
-        grid-template-rows: 26% 74%;
+    .todaymenu {
+        grid-template-rows: repeat(2, 1fr)
     }
 
     .fondo section {
@@ -554,12 +584,8 @@ footer a:hover {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    #carta {
+    .carta {
         grid-template-columns: 30% 70%;
-    }
-
-    #carta article h2 {
-        padding-top: 0;
     }
 }
 
@@ -587,11 +613,11 @@ footer a:hover {
         padding: 0.4em 0 0.4em 2.5em;
     }
 
-    #ourservices .grid {
+    .ourservices .grid {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    #ourservices .grid article:last-child {
+    .ourservices .grid article:last-child {
         grid-column: 3/4;
     }
 
@@ -599,7 +625,7 @@ footer a:hover {
         padding-left: var(--marginGrid);
     }
 
-    section#ourservices article {
+    section.ourservices article {
         padding: calc(var(--marginGrid)*2);
         border-bottom: 0;
         border-left: 1px solid #aaa;
