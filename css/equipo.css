@@ -1,0 +1,45 @@
+.equipo .grid {
+    padding: var(--marginGrid);
+}
+
+.equipo article {
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    color: white;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: var(--marginGeneral) 0;
+    background: rgba(0, 0, 0, 0.8);
+    background-size: cover;
+}
+
+.info h3 {
+    font-weight: 700;
+}
+
+
+.info hr {
+    margin: var(--marginGeneral) 0;
+    width: 50px;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.info h4 {
+    margin-bottom: var(--marginGrid);
+}
+
+
+.info p {
+    display: none;
+}
+
+.info:hover p {
+    display: block;
+}

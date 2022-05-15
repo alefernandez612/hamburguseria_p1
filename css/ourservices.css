@@ -1,0 +1,71 @@
+section {
+    padding: 2.5em 0 1em 0;
+}
+
+.ourservices .grid {
+    padding: 0 var(--marginGrid);
+}
+
+section h2 {
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 200%;
+    text-align: center;
+}
+
+section h2 span {
+    color: var(--colorPrincipal);
+}
+
+section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    font-weight: 700;
+    color: var(--colorPrincipal);
+    text-align: center;
+}
+
+section .underline hr {
+    border: 1px solid var(--colorPrincipal);
+    position: absolute;
+    width: 100%;
+    top: -1px;
+}
+
+section.ourservices article {
+    padding: calc(var(--marginGrid)*2) 0;
+    border-bottom: 1px solid #aaa;
+}
+
+.ourservices article h3 {
+    margin: 0.5em 0;
+}
+
+section article h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+section p {
+    color: #777;
+    line-height: 1.15em;
+    margin-bottom: var(--marginGrid);
+}
+
+.enlace {
+    color: var(--colorPrincipal);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.ourservices article>div i {
+    border: 1px solid var(--colorPrincipal);
+    color: var(--colorPrincipal);
+    font-size: 150%;
+    padding: 0.5em;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}

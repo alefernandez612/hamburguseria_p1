@@ -1,0 +1,72 @@
+.hero {
+    /* background-image: url(../images/fondo.jpg);
+    background-color: .999;
+    background-blend-mode: multiply;
+    background-position: center center;
+    background-size: cover;
+    height: 60vh;
+    display: flex; */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(../images/fondo.jpg) center center / cover;
+    height: 60vh;
+    display: flex;
+}
+
+.hero .container {
+    width: 95%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero h1 {
+    font-family: var(--fuenteSecundaria);
+    font-size: 230%;
+    color: white;
+}
+
+.hero :is(h2, .container>div) {
+    margin: var(--marginGrid) 0;
+}
+
+.hero h2 {
+    color: var(--colorPrincipal);
+    font-size: 125%;
+    text-shadow: 2px 2px 3px black;
+}
+
+.hero p {
+    color: white;
+    font-size: 115%;
+}
+
+
+.boton {
+    color: white;
+    display: inline-block;
+    background-color: var(--colorPrincipal);
+    padding: 1.15em;
+    text-decoration: none;
+    border: 1px solid var(--colorPrincipal);
+}
+
+.boton:hover {
+    background: transparent;
+    color: var(--colorPrincipal);
+}
+
+.boton:hover i {
+    transition: 0.3s;
+    transform: translateX(5px);
+}
+
+.hero .social {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+}
