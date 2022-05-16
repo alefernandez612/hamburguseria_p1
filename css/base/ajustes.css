@@ -19,21 +19,17 @@ body {
     margin: 0 auto;
 }
 
-::-webkit-scrollbar {
-    display: none;
-}
-
 .grid {
     display: grid;
     gap: var(--marginGrid);
 }
 
-.grid:last-child {
-    margin-bottom: calc(var(--marginGrid)*2);
-}
-
 section {
     padding: 1.5em 0 1em 0;
+}
+
+section:last-child {
+    padding-bottom: 4em;
 }
 
 section h2 {
@@ -47,7 +43,7 @@ section h2 span {
     color: var(--colorPrincipal);
 }
 
-section article h3 {
+section h3 {
     font-weight: 700;
     font-size: 110%;
 }
