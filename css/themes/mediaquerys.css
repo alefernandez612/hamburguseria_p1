@@ -13,7 +13,7 @@
         grid-column: 1/3;
     }
 
-    main :is(.outservices article, .aboutus article) {
+    main :is(.outservices article, .aboutus>div) {
         padding-left: var(--marginGrid);
     }
 
