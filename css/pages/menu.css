@@ -18,7 +18,7 @@ main .fondo {
     margin: 0 auto;
 }
 
-.fondo .grid aside>h2 {
+.fondo .grid aside > h2 {
     padding: var(--marginGrid) 0;
 }
 
@@ -27,7 +27,7 @@ main .fondo {
     font-size: 120%;
 }
 
-.title-menu h2 {
+.menu-complete h2 {
     font-family: var(--fuenteSecundaria);
     padding-top: var(--marginGrid);
     padding-bottom: 0.3125em;
@@ -63,11 +63,11 @@ main .fondo {
     margin-bottom: var(--marginGrid);
 }
 
-.todaymenu .container .menu>li {
+.todaymenu .container .menu > li {
     border: 1px solid transparent;
 }
 
-.todaymenu .container .menu li>a {
+.todaymenu .container .menu li > a {
     display: block;
     color: white;
     border-radius: 5px;
@@ -91,6 +91,6 @@ main .fondo {
     line-height: 110%;
 }
 
-.carta article h2>span {
+.carta article h2 > span {
     padding-left: var(--marginGeneral);
 }
