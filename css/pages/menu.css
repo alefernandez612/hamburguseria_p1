@@ -37,10 +37,9 @@ main .fondo {
     width: 100%;
 }
 
-.todaymenu .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.todaymenu .container > ul.menu {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
 }
 
 .todaymenu div.container {
@@ -48,7 +47,7 @@ main .fondo {
 }
 
 .todaymenu .container h2 {
-    text-align: center;
+    text-align: left;
 }
 
 .todaymenu .container hr {
